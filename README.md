@@ -1,5 +1,5 @@
 # Mobago_idea
-아이디어 정리
+[모바고] 아이디어 정리
 
 필자는 로아를 한다. 게임 안에 레이드는 주간마다 정해놓고 돈다. 그런데?!
 
@@ -22,3 +22,16 @@
 - 용병 시스템
 - 캐릭터 스펙 자동 연동
 - ~~커뮤니티(제외될 확률 개높음)~~
+
+## Develop
+- Andoird (9.0, level: 24) - **Kotlin**
+- iOS (13) - **Swift**
+
+## Architecture
+- MVVM pattern (base)
+- delegate pattren (iOS)
+
+## Prototype concept
+- 지인들이 사용할 수 있도록 개발
+- 사용자들의 Log 오류 저장 (Firebase Crashlytics)
+- 2주 사용 결과 DAU, Crashlytics chart, 사용자들의 견해 취합
