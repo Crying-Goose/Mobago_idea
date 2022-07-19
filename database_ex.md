@@ -1,41 +1,68 @@
 DB is **nosql** or **coreData(Sqlite)**
 
 ## Room
-- index (primary key)
-- ruid
-- name
-- game_type
-- reg_date
+>레이드 그룹을 포함하는 집단의 방(이하 길드)
+
+|필드명|데이터 타입|설명|
+|---|:---:|---|
+|index|Int (primary key)|방 인덱스|
+|ruid|String|방의 범용 고유 식별자|
+|name|String|방 제목|
+|game_type|String|방의 게임 타입 (프로토 타입에선 사용되지 않음)|
+|reg_date|Date|방 생성날짜|
+
+## Room user
+>길드 안의 유저
+
+|필드명|데이터 타입|설명|
+|---|:---:|---|
+|index|Int (primary key)|길드안에 유저 인덱스(삭제할 수 있으면 그냥 삭제)|
+|ruid|String (foreign key)|Room 테이블의 ruid|
+|uuid|String (foreign key)|User 테이블의 uuid|
+|room_reg_date|Date|길드에 들어온 날짜|
 
 
-## Raid schedule
-- index (primary key)
-- ruid (foreign key)
-- game_type (foreign key)
-- rsuid
-- name
-- weekdays
-- raid_type
-- reg_date
-- noti_date
+## Raid group
+>길드 안에 레이드 그룹
+
+|필드명|데이터 타입|설명|
+|---|:---:|---|
+|index|Int (primary key)|레이드 그룹 인덱스|
+|ruid|String (foreign key)|Room 테이블의 ruid|
+|game_type|String (foreign key)|방의 게임 타입 (프로토 타입에선 사용되지 않음)|
+|guid|String|레이드 그룹의 범용 고유 식별자|
+|name|String|레이드 그룹의 이름|
+|weekdays|String|레이드 요일(수정가능성 있음)|
+|raid_type|String|그룹의 레이드 종류|
+|reg_date|Date|그룹 생성날짜|
+|noti_date|Date|그룹 알림일정(수정가능성 있음)|
 
 
-## Raid schedule users
-- index (primary key)
-- rsuid (foreign key)
-- noti_date (foreign key)
-- uuid (foreign key)
-- room_reg_date
+## Raid group user
+>레이드 그룹 안에 유저
+
+|필드명|데이터 타입|설명|
+|---|:---:|---|
+|index|Int (primary key)|그륩안에 유저 인덱스(삭제할 수 있으면 그냥 삭제)|
+|guid|String (foreign key)|Raid group 테이블의 guid|
+|uuid|String (foreign key)|User 테이블의 uui)|
+|group_reg_date|Date|레이드 그룹에 들어온 날짜|
 
 
 ## User
-- uuid (primary key)
-- nickname
-- social_type
-- reg_date
+>유저
+
+|필드명|데이터 타입|설명|
+|---|:---:|---|
+|uuid|String (primary key)|유저의 범용 고유 식별자|
+|nickname|String|유저 닉네임|
+|social_type|Int|가입한 소셜 타입|
+|reg_date|Date|회원가입한 날짜|
 
 
-## User games
+## ~~User games~~
+>유저의 게임 (지금은 로스트아크만 하기때문에 클래스만 추가)
+
 - index (primary key)
 - uuid (foreign key)
 - game_type
