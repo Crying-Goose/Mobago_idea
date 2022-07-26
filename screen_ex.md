@@ -11,11 +11,14 @@
 7. 방 찾기 (Room search)
 8. 레이드 그룹방, 레이드 날짜 및 클리어 여부 등 정보 (Raid group)
 9. 레이드 그룹 생성 / 수정 (Raid group settings)
-10. 레이드 그룹 캘린더 (raid calendar)
-11. 알림 (Notifications)
-12. 프로필 (User profile)
-13. 유저 정보 수정 (User info modify)
-14. 설정 (Setting)
+10. 레이드 그룹 / 전체 캘린더 (raid calendar)
+11. 주간 캘린더 (weekly calendar)
+12. 알림 (Notifications)
+13. 프로필 (User profile)
+14. 유저 정보 수정 (User info modify)
+15. 설정 (Setting)
+
+*10번과 11번은 전체적으로 보여주는 MainCalendarView 를 만들고, 각각 상세 View를 보여주게끔*
 
 
 ### Modal (작은 알림창 혹은 시스템 얼럿들)
