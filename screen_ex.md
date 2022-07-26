@@ -30,6 +30,11 @@
 5. 레이드 불참 확인 얼럿
 
 
+### Screen flow chart
+
+![screen_flow_chart](screen_flow_chart.drawio.png)
+
+
 ### 화면 플로우 Ex
 
 - 앱 실행 -> 로그인(자동로그인) -> 메인 -> 리스트 중 원하는 방 선택 -> 레이드 그룹방 -> 그룹방에 레이드 공지 입력 (그 방에 사람들한테 푸시 알림)
